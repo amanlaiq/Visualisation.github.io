@@ -60,23 +60,39 @@
     <br>
     <br>
     <input type="submit" value="Submit" onclick="redirectToPage(event)">
+    <h3>Selected Year: 2023 & Selected Month: April</h3>
+
 </form>
 
-  <script>
+<script>
+  function redirectToPage(event) {
+    event.preventDefault(); // Prevent the default form submission
     
-    function redirectToPage(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+    var selectedMonth = document.getElementById('month').value;
+    var selectedYear = document.getElementById('year').value;
 
-        var selectedMonth = document.getElementById('month').value;
-        var selectedYear = document.getElementById('year').value;
-        
-        var targetURL = 'Linked_Y' + selectedYear + '_' + selectedMonth + '.html';
-        
-        window.location.href = targetURL;
-        }
+    if (selectedMonth == 'SEL' && selectedYear == 'SEL') {
+      var targetURL = 'Linked_Y.html';
+      window.location.href = targetURL;
+    } 
 
+    else if (selectedMonth == 'SEL') {
+      var targetURL = 'Linked_Y' + selectedYear +'.html';
+      window.location.href = targetURL;
+    } 
 
-  </script>
+    else {
+
+      var paragraph = document.createElement('p');
+      var text = document.createTextNode('Selected Year: ' + selectedYear + ', Selected Month: ' + selectedMonth);
+      paragraph.appendChild(text);
+      var targetURL = 'Linked_Y' + selectedYear + '_' + selectedMonth + '.html';
+      window.location.href = targetURL;
+    }
+  
+}
+</script>
+
   <div id="vis"></div>
   <script>
     (function(vegaEmbed) {
