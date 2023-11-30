@@ -320,7 +320,7 @@ d3.json("data/crimes1.json").then(function(data_1){
           .attr("class", "bar")
           .attr("x", (d) => ym_bar_xScale(d.month) + 20)
           .attr("y", (d) => ym_bar_yScale(d.crimes))
-          .attr("fill", "LightSeaGreen")
+          .attr("fill", "DarkGray")
           .attr(
             "height",
             (d) => ym_bar_height - ym_bar_margin.bottom - ym_bar_yScale(d.crimes)
