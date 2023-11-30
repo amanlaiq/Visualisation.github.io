@@ -124,14 +124,14 @@ nav .navigation ul li a:hover {
 }
 
 .area {
-    fill: LightSeaGreen;
-    clip-path: url(#clip);
+	fill: #575757;
+	clip-path: url(#clip);
 }
-
+  
 .zoom {
-    cursor: move;
-    fill: none;
-    pointer-events: all;
+	cursor: move;
+	fill: none;
+	pointer-events: all;
 }
 
 .spatial_view {
